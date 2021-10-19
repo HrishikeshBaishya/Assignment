@@ -8,7 +8,7 @@ int main()
 	int arr2D[10][10], * arr1D;
 	int n, m, i, j;
 
-	// Enter Matrix A
+
 	printf("Enter Number of Rows: ");
 	scanf("%d", &n);
 	printf("Enter Number of columns: ");
@@ -21,13 +21,11 @@ int main()
 		}
 	}
 
-	// allocating memeory to 1D dynamically
-	// size of 1D array will be n*m
 	arr1D = (int*)malloc(n * m * sizeof(int));
 
 	for (i = 0; i < n; ++i) {
 		for (j = 0; j < m; ++j) {
-			// mapping 1D array to 2D array
+			
 			arr1D[i * m + j] = arr2D[i][j];
 		}
 	}
